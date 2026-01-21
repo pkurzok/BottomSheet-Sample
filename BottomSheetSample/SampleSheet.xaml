@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bottomsheet:BottomSheet xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:bottomsheet="http://pluginmauibottomsheet.com"
+                         xmlns:bottomSheetSample="clr-namespace:BottomSheetSample"
+                         x:DataType="bottomSheetSample:SampleSheetViewModel"
+                         x:Class="BottomSheetSample.SampleSheet"
+                         ShowHeader="False"
+                         IsModal="True"
+                         IsDraggable="True">
+
+    <bottomsheet:BottomSheet.Content>
+        <bottomsheet:BottomSheetContent>
+            <VerticalStackLayout Padding="25" Spacing="25">
+                <Label Text="I'm a BottomSheet" />
+
+                <Button
+                    Text="Close Sheet"
+                    Command="{Binding CloseSheetCommand}"
+                    HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+        </bottomsheet:BottomSheetContent>
+    </bottomsheet:BottomSheet.Content>
+</bottomsheet:BottomSheet>
